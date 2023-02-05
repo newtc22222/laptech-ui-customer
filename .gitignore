@@ -1,2 +1,12 @@
-# Modules
+# ide
+.vscode
+
+# build
+/build
+/dist
+
+# modules
 /node_modules
+
+# lock file
+/package-lock.json
