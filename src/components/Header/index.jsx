@@ -25,7 +25,6 @@ const Header = () => {
                 aria-label="Bootstrap"
               ></svg>
             </a>
-
             <form className="w-50 me-3">
               <input
                 type="search"
@@ -100,31 +99,13 @@ const Header = () => {
         <div className="px-3 py-2 border-bottom mb-3">
           <div className="container d-flex flex-wrap justify-content-center">
             <ul className="nav">
-              <li>
-                <Link to="/brand/asus" className="nav-link">
-                  ASUS
-                </Link>
-              </li>
-              <li>
-                <Link to="/brand/acer" className="nav-link">
-                  ACER
-                </Link>
-              </li>
-              <li>
-                <Link to="/brand/lenovo" className="nav-link">
-                  LENOVO
-                </Link>
-              </li>
-              <li>
-                <Link to="/brand/dell" className="nav-link">
-                  DELL
-                </Link>
-              </li>
-              <li>
-                <Link to="/brand/gygabits" className="nav-link">
-                  GYGABITS
-                </Link>
-              </li>
+              {['asus', 'acer', 'lenovo'].map(x => (
+                <li>
+                  <Link to={'/brand/' + x} className="nav-link">
+                    {x.toUpperCase()}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

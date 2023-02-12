@@ -54,12 +54,15 @@ const AdvertiseCarousel = () => {
             banners.map((banner, index) => {
               return (
                 <Carousel.Item key={index}>
-                  <img
-                    className="d-block w-100"
-                    // style={{width: '44vw', height: '12.48vw'}}
-                    src={banner.path}
-                    alt={banner.type}
-                  />
+                  <a href={banner.linkProduct}>
+                    <img
+                      className="d-block w-100"
+                      // style={{width: '44vw', height: '12.48vw'}}
+                      title={banner.title}
+                      src={banner.path}
+                      alt={banner.type}
+                    />
+                  </a>
                 </Carousel.Item>
               );
             })
